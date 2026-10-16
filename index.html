@@ -2,37 +2,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy for UTracker: Movies & Books by BlaizTM.">
-  <title>Privacy Policy - UTracker: Movies &amp; Books</title>
+  <meta name="description" content="Support the development of Ultimate Tracker">
+  <title>Support Ultimate Tracker</title>
   <style>
+    :root {
+      --bg: #0f1115;
+      --card: #1a1d24;
+      --card-hover: #22262f;
+      --text: #f2f3f5;
+      --text-dim: #9aa0ab;
+      --accent: #e5484d;
+      --border: #2a2e38;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f5f6f8;
+        --card: #ffffff;
+        --card-hover: #f0f1f4;
+        --text: #1a1d24;
+        --text-dim: #5b6270;
+        --accent: #d13438;
+        --border: #e1e4ea;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 820px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #202124;
-      line-height: 1.75;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
     }
-    h1, h2 { color: #174ea6; }
-    h1 { line-height: 1.25; }
-    a { color: #1769e0; overflow-wrap: anywhere; }
-    footer {
-      margin-top: 36px;
-      padding-top: 18px;
-      border-top: 1px solid #ddd;
-      color: #666;
-      font-size: 14px;
+    main { width: 100%; max-width: 420px; text-align: center; }
+    .avatar {
+      width: 88px; height: 88px;
+      border-radius: 24px;
+      margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--accent);
+      font-size: 40px;
     }
+    h1 { font-size: 1.5rem; margin-bottom: 8px; }
+    .subtitle { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 32px; line-height: 1.5; }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    .link {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+    .link:hover { background: var(--card-hover); transform: translateY(-2px); }
+    .link:active { transform: translateY(0); }
+    .icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      color: #fff;
+    }
+    .icon.kofi { background: #13c3ff; }
+    .icon.da { background: #f57d07; }
+    .icon.patreon { background: #000; }
+    .icon.boosty { background: #f15f2c; }
+    .label { text-align: left; }
+    .label strong { display: block; font-size: 1rem; }
+    .label span { font-size: 0.82rem; color: var(--text-dim); }
+    .arrow { margin-left: auto; color: var(--text-dim); font-size: 1.1rem; }
+    footer { margin-top: 32px; color: var(--text-dim); font-size: 0.8rem; }
+    footer a { color: var(--text-dim); }
   </style>
 </head>
 <body>
 <main>
+    <div class="avatar" aria-hidden="true">❤️</div>
+    <h1>Support Ultimate Tracker</h1>
+    <p class="subtitle">
+      Ultimate Tracker is free and open source.<br>
+      If you enjoy the app, you can support its development through any of these channels.
+    </p>
 
-  <footer>
-    <p>BlaizTM</p>
-  </footer>
-</main>
+    <nav class="links" aria-label="Support channels">
+      <a class="link" href="https://ko-fi.com/W4G326YHFM" target="_blank" rel="noopener">
+        <span class="icon kofi" aria-hidden="true">☕</span>
+        <span class="label">
+          <strong>Ko-fi</strong>
+          <span>One-time donations &amp; memberships</span>
+        </span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link" href="https://www.donationalerts.com/r/YOUR_USERNAME" target="_blank" rel="noopener">
+        <span class="icon da" aria-hidden="true">🔔</span>
+        <span class="label">
+          <strong>DonationAlerts</strong>
+          <span>Donations with alerts</span>
+        </span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link" href="https://www.patreon.com/YOUR_USERNAME" target="_blank" rel="noopener">
+        <span class="icon patreon" aria-hidden="true">P</span>
+        <span class="label">
+          <strong>Patreon</strong>
+          <span>Monthly support &amp; perks</span>
+        </span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link" href="https://boosty.to/YOUR_USERNAME" target="_blank" rel="noopener">
+        <span class="icon boosty" aria-hidden="true">⚡</span>
+        <span class="label">
+          <strong>Boosty</strong>
+          <span>Subscriptions &amp; one-time support</span>
+        </span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </nav>
+
+    <footer>
+      BlaizTM's Support page, Thank you!
+    </footer>
+  </main>
 </body>
 </html>
